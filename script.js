@@ -12,6 +12,11 @@ document.addEventListener('touchstart', () => {
     if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
 });
 
+document.addEventListener('touchmove', () => {
+    if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
+});
+
+
 function moveDVDLoop() {
     changeBgColor('#101010');
     setInterval(moveDVD, 10);
