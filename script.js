@@ -4,12 +4,17 @@ let yVelocityDVD = 1;
 let isInLoop = false;
 
 
-document.addEventListener('wheel', () => {
+document.addEventListener('mousedown', () => {
     if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
 });
 
 function moveDVDLoop() {
+    changeBgColor('#101010');
     setInterval(moveDVD, 10);
+}
+
+function changeBgColor(color) {
+    document.body.style.backgroundColor = color;
 }
 
 function moveDVD() {
