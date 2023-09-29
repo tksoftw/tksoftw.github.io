@@ -8,9 +8,13 @@ document.addEventListener('mousemove', () => {
     if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
 });
 
+function handleTouch() {
+    if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
+}
+
 function moveDVDLoop() {
     document.getElementById('random-text').style.display = 'none';
-    changeBgColor('white'); // #101010
+    changeBgColor('#151515'); // 
     setInterval(moveDVD, 10);
 }
 
