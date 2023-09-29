@@ -2,7 +2,7 @@
     position: absolute;
     width: 305;
     height: 137;
-    left: 350;
-    top: 500;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }

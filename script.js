@@ -3,25 +3,17 @@ let yVelocityDVD = 1;
 
 let isButtonPressed = false;
 
-document.addEventListener('mousedown', () => !isButtonPressed && ((isButtonPressed = true) || loop()));
-document.addEventListener('mouseup', () => isButtonPressed = false);
 
-window.onload = moveDVDLoop;
+document.addEventListener('mouseenter', () => {
+    if ( !isButtonPressed ) { moveDVDLoop(); }
+});
 
-
-function animate(func, fps) {
-    // perform some animation task here
-    func();
-    setTimeout(() => {
-        requestAnimationFrame(animate);
-    }, 1000 / fps);
-}
+//window.onload = moveDVDLoop;
 
 function moveDVDLoop() {
-    while (true) {
-        animate(moveDVD, 60);
-    }
+    setInterval(moveDVD, 10);
 }
+
 
 function moveDVD() {
     let dvd = document.getElementById('dvd');
