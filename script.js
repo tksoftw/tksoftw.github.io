@@ -14,7 +14,7 @@ function handleTouch() {
 
 function moveDVDLoop() {
     document.getElementById('random-text').style.display = 'none';
-    changeBgColor('#151515'); // 
+    changeBgColor('#202020');
     setInterval(moveDVD, 10);
 }
 
