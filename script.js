@@ -9,6 +9,7 @@ document.addEventListener('mousemove', () => {
 });
 
 function moveDVDLoop() {
+    document.getElementById('random-text').style.display = 'none';
     changeBgColor('#101010');
     setInterval(moveDVD, 10);
 }

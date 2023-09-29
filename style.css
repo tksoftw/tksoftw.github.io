@@ -11,8 +11,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
+#random-text {
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .noselect {
-    /* -webkit-touch-callout: none; */
+    -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
     /* Safari */
