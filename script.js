@@ -4,7 +4,11 @@ let yVelocityDVD = 1;
 let isInLoop = false;
 
 
-document.addEventListener('mousemove', () => {
+document.addEventListener('mousedown', () => {
+    if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
+});
+
+document.addEventListener('touchstart', () => {
     if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
 });
 
