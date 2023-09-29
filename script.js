@@ -31,6 +31,8 @@ function isOnEdge(elem) {
 
 function isOnCorner(elem) {
     var bounding = elem.getBoundingClientRect();
-    return (bounding.top < 0 && bounding.left < 0 ||
-            bounding.bottom > window.innerHeight && bounding.right > window.innerWidth);
+    return (bounding.top < 0 && bounding.left < 0) ||
+            (bounding.top < 0 && bounding.right > window.innerWidth) ||
+            (bounding.bottom > window.innerHeight && bounding.left < 0) ||
+            (bounding.bottom > window.innerHeight && bounding.right > window.innerWidth);
 }
