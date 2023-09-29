@@ -1,19 +1,16 @@
 let xVelocityDVD = 1;
 let yVelocityDVD = 1;
 
-let isButtonPressed = false;
+let isInLoop = false;
 
 
-document.addEventListener('mouseenter', () => {
-    if ( !isButtonPressed ) { moveDVDLoop(); }
+document.addEventListener('mousemove', () => {
+    if ( !isInLoop ) { moveDVDLoop(); isInLoop=true;}
 });
-
-//window.onload = moveDVDLoop;
 
 function moveDVDLoop() {
     setInterval(moveDVD, 10);
 }
-
 
 function moveDVD() {
     let dvd = document.getElementById('dvd');
@@ -44,7 +41,7 @@ function pushBy(elem, deltaX, deltaY) {
     // Assuming elem.style.left and elem.style.top are already set
     let x = parseInt(style.left) + deltaX;
     let y = parseInt(style.top) + deltaY;
-    updateDisplay(x, isButtonPressed);
+    updateDisplay(x, isInLoop);
     moveTo(elem, x, y);
 }
 
